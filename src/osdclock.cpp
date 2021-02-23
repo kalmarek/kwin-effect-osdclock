@@ -116,7 +116,7 @@ void OsdClockEffect::reconfigure(ReconfigureFlags)
     effects->addRepaintFull();
 }
 
-void OsdClockEffect::prePaintScreen(ScreenPrePaintData& data, int time)
+void OsdClockEffect::prePaintScreen(ScreenPrePaintData &data, std::chrono::milliseconds time)
 {
     effects->prePaintScreen(data, time);
     data.paint += clockTextRect;

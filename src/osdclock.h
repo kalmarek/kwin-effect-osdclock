@@ -44,7 +44,7 @@ class OsdClockEffect
 public:
     OsdClockEffect();
     virtual void reconfigure(ReconfigureFlags);
-    virtual void prePaintScreen(KWin::ScreenPrePaintData& data, int time);
+    virtual void prePaintScreen(KWin::ScreenPrePaintData &data, std::chrono::milliseconds time);
     virtual void paintScreen(int mask, const QRegion &region, KWin::ScreenPaintData& data);
     virtual void paintWindow(KWin::EffectWindow* w, int mask, const QRegion &region, KWin::WindowPaintData& data);
     virtual void postPaintScreen();
